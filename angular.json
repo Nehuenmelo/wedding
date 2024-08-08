@@ -31,10 +31,10 @@
             ],
             "styles": [
               "src/styles.scss",
-							"node_modules/primeng/resources/themes/mira/theme.css",
-							"node_modules/primeng/resources/primeng.min.css",
-							"node_modules/primeicons/primeicons.css",
-							"node_modules/primeflex/primeflex.css"
+              "node_modules/primeng/resources/themes/mira/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -103,7 +103,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "wedding-invite:build:production"
+          }
         }
       }
     }

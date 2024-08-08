@@ -1,15 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-@import "primeicons/primeicons.css";
-
-$primary-color: #ded0c5;
-
-body {
-	margin: 0;
-}
-
-.section {
+#gifts {
 	display: flex;
 
 	flex-direction: column;
@@ -47,12 +36,24 @@ body {
 		margin-top: 8px;
 	}
 
-	a, button {
+	a {
 		margin-top: 20px;
-		font-size: 1.1em;
+		font-size: 1.5em;
 		padding: 20px;
 		text-decoration: none;
-		background-color: $primary-color;
+		background-color: #ded0c5;
 		border: 0px;
+	}
+
+	.cbu-class {
+		cursor: pointer;
+	}
+
+	.cbu {
+		font-size: 12px;
+
+		i {
+			cursor: pointer;
+		}
 	}
 }

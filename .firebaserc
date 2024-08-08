@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wedding-app-e2f2c"
+  },
+  "targets": {
+    "wedding-app-e2f2c": {
+      "hosting": {
+        "wedding-invite": [
+          "wedding-app-e2f2c"
+        ]
+      }
+    }
+  }
+}

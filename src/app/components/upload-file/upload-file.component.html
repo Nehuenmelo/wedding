@@ -1,8 +1,10 @@
 <div id="upload-file">
-	<img src="./assets/gifts/camera.gif" style="width: 180px;"/>
+	<img src="./assets/gifs/camera.gif" style="width: 180px;"/>
 	<h2>Compartí fotos</h2>
 	<p>Subí fotos de la fiesta al álbum!</p>
-	<a href="https://maps.app.goo.gl/1kG7tbPdteYVjZq67" target="_blank" rel="noopener noreferrer" class="p-button">Subir fotos</a>
-	<a href="https://maps.app.goo.gl/1kG7tbPdteYVjZq67" target="_blank" rel="noopener noreferrer" class="p-button">Ver fotos</a>
-	<!-- <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onUpload($event)"></p-fileUpload> -->
+	<a target="_blank" rel="noopener noreferrer" class="p-button">SUBIR FOTOS</a>
+	<a target="_blank" rel="noopener noreferrer" class="p-button">VER FOTOS</a>
+	<p-fileUpload mode="basic" chooseLabel="SUBIR FOTOS" accept="image/*" (onUpload)="uploadPhoto()"></p-fileUpload>
+	<input type="file" (change)="onFileSelected($event)">
+  <button (click)="uploadPhoto()">Subir Foto</button>
 </div>

@@ -1,0 +1,15 @@
+@use "../../../styles.scss" as v;
+
+.form-asist {
+	padding-top: 20px;
+}
+
+::ng-deep {
+  .p-selectbutton .p-button.p-highlight {
+    background-color: v.$primary-color;
+  }
+
+  .p-selectbutton .p-button.p-highlight:hover {
+    background: rgb(151, 127, 97);
+  }
+}

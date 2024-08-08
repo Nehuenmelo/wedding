@@ -1,0 +1,30 @@
+<form id="confirm-assistance" class="section" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <h2>Confirmar asistencia</h2>
+  <p class="mb-4">Por favor, confirmá tu asistencia.</p>
+  
+  <span class="p-float-label">
+    <input pInputText id="name" formControlName="name" />
+    <label for="name">Nombre</label>
+  </span>
+	<small class="p-error block" *ngIf="formulario.get('name')?.invalid && formulario.get('name')?.dirty">
+		Escribí tu nombre (mínimo 2 caracteres)
+	</small>
+
+  <p class="mt-3 mb-2">Asistirás?</p>
+  <p-selectButton class="mb-4 button" [options]="stateOptions" formControlName="assist" optionLabel="label" optionValue="value"></p-selectButton>
+  <small class="p-error block" *ngIf="formulario.get('assist')?.invalid && formulario.get('assist')?.dirty">
+    Selecciona una opción
+  </small>
+
+  <span class="p-float-label">
+    <textarea id="float-input" formControlName="message" rows="5" cols="30" pInputTextarea></textarea>
+    <label for="float-input">Querés dejarnos un mensaje? Porfa </label>
+    <small class="p-error block" *ngIf="formulario.get('message')?.invalid && formulario.get('message')?.dirty">
+      Escribí tu mensaje (mínimo 2 caracteres)
+    </small>
+  </span>
+
+  <button type="submit" rel="noopener noreferrer" class="p-button" [disabled]="formulario.invalid">ENVIAR RESPUESTA</button>
+
+  <p-toast></p-toast>
+</form>
