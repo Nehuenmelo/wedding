@@ -1,0 +1,17 @@
+.p-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.p-table td, .p-table th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}

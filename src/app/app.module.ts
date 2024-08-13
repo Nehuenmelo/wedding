@@ -14,6 +14,7 @@ import { CeremonyComponent } from './components/ceremony/ceremony.component';
 import { WeComponent } from './components/we/we.component';
 import { GiftsComponent } from './components/gifts/gifts.component';
 import { ConfirmAssistanceComponent } from './components/confirm-assistance/confirm-assistance.component';
+import { PeopleListComponent } from './pages/people-list/people-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
@@ -23,7 +24,9 @@ import { ToastModule } from 'primeng/toast';
 import { ImageModule } from 'primeng/image';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { TableModule } from 'primeng/table';
 import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { environment } from 'src/environments/environment';
     //UploadFileComponent,
     WeComponent,
     GiftsComponent,
-    ConfirmAssistanceComponent
+    ConfirmAssistanceComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,7 @@ import { environment } from 'src/environments/environment';
     DialogModule,
 		ToastModule,
 		ImageModule,
+		TableModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
