@@ -20,6 +20,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DialogModule } from 'primeng/dialog';
 import { ToastModule } from 'primeng/toast';
+import { ImageModule } from 'primeng/image';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
@@ -49,6 +50,7 @@ import { environment } from 'src/environments/environment';
     SelectButtonModule,
     DialogModule,
 		ToastModule,
+		ImageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],

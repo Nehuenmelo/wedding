@@ -6,25 +6,25 @@
     <input pInputText id="name" formControlName="name" />
     <label for="name">Nombre</label>
   </span>
-	<small class="p-error block" *ngIf="formulario.get('name')?.invalid && formulario.get('name')?.dirty">
+	<small class="p-error block" *ngIf="formulario.get('name')?.invalid && formulario.get('name')?.touched">
 		Escribí tu nombre (mínimo 2 caracteres)
 	</small>
 
   <p class="mt-3 mb-2">Asistirás?</p>
   <p-selectButton class="mb-4 button" [options]="stateOptions" formControlName="assist" optionLabel="label" optionValue="value"></p-selectButton>
-  <small class="p-error block" *ngIf="formulario.get('assist')?.invalid && formulario.get('assist')?.dirty">
+  <small class="p-error block" *ngIf="formulario.get('assist')?.invalid && formulario.get('assist')?.touched">
     Selecciona una opción
   </small>
 
   <span class="p-float-label">
+		<p class="mt-3 mb-2">Escribinos los nombres de los que vienen y si queres dejanos un mensajito</p>
     <textarea id="float-input" formControlName="message" rows="5" cols="30" pInputTextarea></textarea>
-    <label for="float-input">Querés dejarnos un mensaje? Porfa </label>
-    <small class="p-error block" *ngIf="formulario.get('message')?.invalid && formulario.get('message')?.dirty">
+    <small class="p-error block" *ngIf="formulario.get('message')?.invalid && formulario.get('message')?.touched">
       Escribí tu mensaje (mínimo 2 caracteres)
     </small>
   </span>
 
-  <button type="submit" rel="noopener noreferrer" class="p-button" [disabled]="formulario.invalid">ENVIAR RESPUESTA</button>
+  <button type="submit" rel="noopener noreferrer" class="p-button">ENVIAR RESPUESTA</button>
 
   <p-toast></p-toast>
 </form>

@@ -1,4 +1,14 @@
 <div id="we">
 	<img src="./assets/gifs/dating.gif" style="width: 180px;"/>
 	<h2>Nosotros</h2>
+	<div class="card">
+		<p-image 
+			*ngFor="let photo of images" 
+			[src]="photo" 
+			alt="Image" 
+			[style.margin.px]="15"
+			height="220"
+			>
+		</p-image>
+	</div>
 </div>
